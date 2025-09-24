@@ -277,9 +277,18 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 })
 
+// Navigation Active Class
+document.addEventListener("DOMContentLoaded", () => {
+    const currentURL = window.location.href.split('#')[0].split('?')[0];
+    const navLinks = document.querySelectorAll('.nav__link');
+    
+    navLinks.forEach(link => {
+        // Get the full absolute URL of the nav link
+        const navLinkURL = link.href;
 
-
-// Console message for developers
-console.log("🎨 Jerry Nolan Hair Website - Built with vanilla HTML, CSS & JS")
-console.log("📱 Mobile-first, accessible, and optimized for performance")
-console.log("🚀 Ready for GitHub Pages deployment")
+        // Compare the full URLs
+        if (currentURL === navLinkURL) {
+            link.classList.add('nav__link--active');
+        }
+    });
+});
