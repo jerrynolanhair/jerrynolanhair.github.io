@@ -414,6 +414,7 @@ a {
   text-align: center;
   background: linear-gradient(135deg, #000000 0%, #0b0b0b 50%, #151515 100%);
   position: relative;
+  padding-top: 70px;
 }
 
 .hero::before {
@@ -474,7 +475,18 @@ a {
   }
 
   .hero__image-container {
-    flex: 0 0 250px;
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__secondary-actions {
+    justify-content: center;
   }
 }
 
