@@ -340,7 +340,7 @@ a {
   }
 
   .btn--large {
-    padding: 0.8rem 1.6rem;
+    padding: 0.75rem 1.4rem;
     font-size: 0.9rem;
   }
 }
@@ -468,16 +468,23 @@ a {
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding-top: 70px;
+    padding-bottom: 2rem;
+    min-height: auto;
+  }
+
   .hero__content-wrapper {
     flex-direction: column;
     text-align: center;
-    gap: 2rem;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
   }
 
   .hero__image-container {
     flex: 0 0 auto;
     width: 100%;
-    max-width: 300px;
+    max-width: 260px;
     margin: 0 auto;
   }
 
@@ -514,11 +521,35 @@ a {
   line-height: 1.2;
 }
 
+/* Mobile-specific hero title adjustments */
+@media (max-width: 768px) {
+  .hero__title-wrapper {
+    margin-bottom: 1rem;
+  }
+
+  .hero__title-main {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+
+  .hero__title-sub {
+    font-size: clamp(1.2rem, 6vw, 1.5rem);
+  }
+}
+
 .hero__subtitle {
   font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   margin-bottom: 1rem;
   color: rgba(255, 255, 255, 0.8);
   font-weight: 300;
+}
+
+/* Mobile-specific subtitle adjustments */
+@media (max-width: 768px) {
+  .hero__subtitle {
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
 }
 
 .hero__actions {
@@ -530,6 +561,27 @@ a {
   margin-top: 1.5rem;
 }
 
+/* Mobile-specific button container adjustments */
+@media (max-width: 768px) {
+  .hero__actions {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.75rem;
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .hero__secondary-actions {
   display: flex;
   justify-content: flex-start;
@@ -537,11 +589,38 @@ a {
   margin-bottom: 1.5rem;
 }
 
+/* Mobile-specific secondary actions adjustments */
+@media (max-width: 768px) {
+  .hero__secondary-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 0.5rem auto 1.25rem;
+    justify-content: center;
+  }
+
+  .hero__secondary-actions .btn {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .hero__note {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.7);
   margin-top: 1rem;
   font-style: italic;
+}
+
+/* Mobile-specific note adjustments */
+@media (max-width: 768px) {
+  .hero__note {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-top: 1rem;
+    padding: 0 0.5rem;
+  }
 }
 
 .other-areas__text {
